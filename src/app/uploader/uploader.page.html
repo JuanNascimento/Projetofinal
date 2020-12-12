@@ -1,0 +1,40 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="dentais"></ion-back-button>
+      </ion-buttons>
+      <br>
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Upload de arquivo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="col-md-6 " id="imgion">
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/xGWnGbb/Logo.png" alt="Logo"></a>
+  </div>
+  <ion-card-header style="text-align: center;" color="tertiary">
+    <ion-card-title>Upload dos seus arquivos</ion-card-title>
+  </ion-card-header>
+  <ion-card style="text-align: center;">
+      
+  
+  <ion-button (click)="openGalery()" expand="block">
+    Escolher foto
+    <br>
+    <ion-icon name="images"></ion-icon>
+  </ion-button>
+  <br>
+  <ion-item>
+    <ion-label><ion-icon name="cloud-upload"></ion-icon> Progresso do upload: {{ uploadPercent | async }}</ion-label>
+  </ion-item>
+  <br>
+  <ion-item>
+    <ion-label class="ion-text-wrap"><ion-icon name="download"></ion-icon> URL de download : {{ downloadUrl | async }}</ion-label>
+  </ion-item>
+<br>
+  <img [src]="downloadUrl | async" *ngIf="downloadUrl | async">
+</ion-card>
+</ion-content>

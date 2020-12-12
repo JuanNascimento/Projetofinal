@@ -1,0 +1,31 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary" >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dentais</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div #map id="map"></div>
+  
+  <ion-list>
+    <ion-item *ngFor="let dental of lista">
+      <ion-label><ion-chip>
+        <ion-avatar>
+          <img src="https://blog.suryadental.com.br/wp-content/uploads/2018/10/quanto-gasta-um-estudante-de-odontologia2.jpg">
+        </ion-avatar>
+      </ion-chip>{{dental.nome}}</ion-label>
+      <ion-button (click)="visualizar(dental)" color="tertiary" style="scroll-margin-top: 30px;" size="block">
+        Visualizar
+         
+        <ion-icon name="eye"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+
+
+</ion-content>

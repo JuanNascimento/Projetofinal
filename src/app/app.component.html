@@ -1,0 +1,33 @@
+<ion-app style="text-align: center;">
+  <ion-split-pane style="text-align: center;" contentId="main-content">
+    <ion-menu style="text-align: center;" contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list style="text-align: center;" id="inbox-list"> 
+  <ion-header><h3>Locate Dental</h3></ion-header>
+          <ion-note>APP DENTAL</ion-note>
+
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+              <ion-label>{{ p.title }}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+
+        <ion-list id="labels-list">
+          <ion-list-header>Desenvolvido por Brunno, David e Juan</ion-list-header>
+          <div class="col-md-6 " id="imgion">
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/xGWnGbb/Logo.png" alt="Logo"></a>
+          </div>
+
+          <ion-item *ngFor="let label of labels" lines="none">
+            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
+            <ion-label>{{ label }}</ion-label>
+           
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

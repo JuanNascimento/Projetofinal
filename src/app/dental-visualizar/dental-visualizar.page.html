@@ -1,0 +1,71 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="dentais"></ion-back-button>
+    </ion-buttons>
+    <br>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dental visualizar</ion-title>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="person"></ion-icon> Nome</ion-label>
+    <ion-input disabled="true" value="{{dental.nome}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="link"></ion-icon> Link</ion-label>
+    <ion-input disabled="true" value="{{dental.link}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="home"></ion-icon> Endereco</ion-label>
+    <ion-input disabled="true" value="{{dental.endereco}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="pin"></ion-icon> Número</ion-label>
+    <ion-input disabled="true" value="{{dental.numero}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="navigate"></ion-icon> Cidade</ion-label>
+    <ion-input disabled="true" value="{{dental.cidade}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="globe"></ion-icon> Estado</ion-label>
+    <ion-input disabled="true" value="{{dental.estado}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating"><ion-icon name="mail-open"></ion-icon> E-mail</ion-label>
+    <ion-input disabled="true" value="{{dental.email}}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label  position="floating"><ion-icon name="call"></ion-icon> Telefone</ion-label>
+    <ion-input disabled="true" value="{{dental.telefone}}"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="atualizar()" color="tertiary" style="scroll-margin-top: 10px;" size="block" >
+    Atualizar
+     
+    <ion-icon name="checkmark"></ion-icon>
+  </ion-button>
+  <ion-button (click)="excluir()" color="tertiary" style="scroll-margin-top: 10px;" size="block" >
+    Excluir
+     
+    <ion-icon name="close"></ion-icon>
+  </ion-button>
+
+</ion-content>
+
+
+

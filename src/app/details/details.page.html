@@ -1,0 +1,48 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="material"></ion-back-button>
+    </ion-buttons>
+    <br>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Salvar Material</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <div class="col-md-6 " id="imgion">
+      <a href="https://imgbb.com/"><img src="https://i.ibb.co/xGWnGbb/Logo.png" alt="Logo"></a>
+    </div>
+    <ion-card-header style="text-align: center;" color="tertiary">
+      <ion-card-title>Adicionar materiais para dentais parceiras</ion-card-title>
+      <br>
+      <ion-card-subtitle>Por favor, insira os campos corretamente:</ion-card-subtitle>
+      <br>
+
+    </ion-card-header>
+    <br>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="material.name"  placeholder=" Nome: "><ion-icon name="create"><br></ion-icon></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="material.description" placeholder=" Descrição: "><ion-icon name="clipboard"><br></ion-icon></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="material.picture" placeholder=" Foto: "><ion-icon name="images"><br></ion-icon></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="material.price" placeholder=" Preço: " ><ion-icon name="cash"><br></ion-icon></ion-input>
+    </ion-item>
+    <br>
+    <ion-button (click)="saveMaterial()" expand="block">
+      Salvar produto
+      <br>
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
+  </ion-list>
+</ion-content>
+

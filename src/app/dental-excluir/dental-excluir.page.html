@@ -1,0 +1,33 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="dentais"></ion-back-button>
+    </ion-buttons>
+    <br>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Dental excluir</ion-title>
+  </ion-toolbar>
+</ion-header>
+<br>
+<ion-content>
+  <div class="col-md-6 " id="imgion">
+    <a href="https://imgbb.com/"><img src="https://i.ibb.co/xGWnGbb/Logo.png" alt="Logo"></a>
+  </div>
+  <ion-card-header style="text-align: center;" color="tertiary">
+    <ion-card-title>Excluir Dentais</ion-card-title>
+    <bR>
+      <ion-card-subtitle>Tem certeza que deseja excluir uma dental? (Cuidado)</ion-card-subtitle>
+  </ion-card-header>
+  <ion-item>
+    <ion-label>Deseja excluir {{dental.nome}}?</ion-label>
+  </ion-item>
+<br>
+  <ion-button (click)="excluir()" color="tertiary" style="scroll-margin-top: 10px;" size="block" >
+    Excluir
+     
+    <ion-icon name="close"></ion-icon>
+  </ion-button>
+
+</ion-content>

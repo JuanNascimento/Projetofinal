@@ -1,0 +1,62 @@
+<ion-header style="text-align: center;">
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro da Dental</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form [formGroup]="formGroup">
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="person"></ion-icon> Nome</ion-label>
+      <ion-input type="text" formControlName="nome"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="link"></ion-icon> Link</ion-label>
+      <ion-input type="text" formControlName="link"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="home"></ion-icon> Endereço</ion-label>
+      <ion-input type="text" formControlName="endereco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="pin"></ion-icon> Número</ion-label>
+      <ion-input type="text" formControlName="numero"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="navigate"></ion-icon> Cidade</ion-label>
+      <ion-input type="text" formControlName="cidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="globe"></ion-icon> Estado</ion-label>
+      <ion-input type="text" formControlName="estado"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating"><ion-icon name="mail-open"></ion-icon> E-mail</ion-label>
+      <ion-input type="text" formControlName="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label  position="floating"> <ion-icon name="call"></ion-icon> Telefone</ion-label>
+      <ion-input type="text" formControlName="telefone"></ion-input>
+    </ion-item>
+<br>
+    <ion-button (click)="cadastrar()" color="tertiary" style="scroll-margin-top: 30px;" size="block">
+      cadastrar
+       
+      <ion-icon name="checkmark"></ion-icon>
+    </ion-button>
+  </form>
+
+</ion-content>
